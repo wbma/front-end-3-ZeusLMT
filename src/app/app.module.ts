@@ -3,16 +3,21 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { ListMediaComponent } from './list-media/list-media.component';
+import {MediaService} from './services/media.service';
+import {HttpClientModule} from '@angular/common/http';
+import {DigitransitService} from './services/digitransit.service';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ListMediaComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, HttpClientModule
   ],
-  providers: [],
+  providers: [MediaService, DigitransitService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

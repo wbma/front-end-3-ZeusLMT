@@ -1,0 +1,27 @@
+<div *ngFor="let stop of stopArray">
+  <h2>Stop: {{stop.name}}</h2>
+  <ul>
+    <li *ngFor="let route of stop.patterns">
+      <h3>Bus: {{route.name}}</h3>
+      <p>Long name: {{route.route.longName}}</p>
+      <p>Short name: {{route.route.shortName}}</p>
+    </li>
+  </ul>
+</div>
+
+
+<p>
+  {{ printThis }}
+</p>
+
+
+
+<div class="card-deck">
+  <div class="card" *ngFor="let media of mediaArray">
+    <img class="card-img-top" [src]="mediaService.mediaUrl + media.thumbnail" [alt]="media.title">
+    <div class="card-body">
+      <h5 class="card-title">{{ media.title }}</h5>
+      <p class="card-text">{{ media.description }}</p>
+    </div>
+  </div>
+</div>
